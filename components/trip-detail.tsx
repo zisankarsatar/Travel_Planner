@@ -26,7 +26,6 @@ export default function TripDetailClient({ trip }: TripDetailClientProps) {
       {" "}
       {trip.imageUrl && (
         <div className="w-full h-72 md:h-96 overflow-hidden rounded-xl shadow-lg relative">
-          {" "}
           <Image
             src={trip.imageUrl}
             alt={trip.title}
