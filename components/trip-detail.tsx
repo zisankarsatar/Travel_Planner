@@ -7,8 +7,8 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { useState } from "react";
-// import Map from "@/components/map";
-// import SortableItinerary from "./sortable-itinerary";
+import Map from "@/components/map";
+import SortableItinerary from "./sortable-itinerary";
 
 export type TripWithLocation = Trip & {
   locations: Location[];
@@ -107,7 +107,7 @@ export default function TripDetailClient({ trip }: TripDetailClientProps) {
                 </div>
               </div>
               <div className="h-72 rounded-lg overflow-hidden shadow">
-                {/* <Map itineraries={trip.locations} /> */}
+                <Map itineraries={trip.locations} />
               </div>
               {trip.locations.length === 0 && (
                 <div className="text-center p-4">
@@ -145,14 +145,13 @@ export default function TripDetailClient({ trip }: TripDetailClientProps) {
                 </Link>
               </div>
             ) : (
-                <div>dump</div>
-            //   <SortableItinerary locations={trip.locations} tripId={trip.id} />
+                <SortableItinerary locations={trip.locations} tripId={trip.id} />
             )}
           </TabsContent>
 
           <TabsContent value="map" className="space-y-6">
             <div className="h-72 rounded-lg overflow-hidden shadow">
-              {/* <Map itineraries={trip.locations} /> */}
+              <Map itineraries={trip.locations} />
             </div>
             {trip.locations.length === 0 && (
               <div className="text-center p-4">
