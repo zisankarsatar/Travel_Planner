@@ -73,7 +73,7 @@ export default async function TripsPage() {
           </Card>
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {sortedTrips.slice(0, 6).map((trip, key) => (
+            {sortedTrips.map((trip, key) => (
               <Link key={key} href={`/trips/${trip.id}`}>
                 <Card className="h-full hover:shadow-md transition-shadow">
                   <CardHeader>
