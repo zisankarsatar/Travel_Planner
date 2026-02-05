@@ -113,9 +113,9 @@ export default function GlobePage() {
                           You've visited{" "}
                           <span className="font-bold">
                             {" "}
-                            {visitedCountries.size}
+                            {locations.length}
                           </span>{" "}
-                          countries.
+                          places.
                         </p>
                       </div>
 
